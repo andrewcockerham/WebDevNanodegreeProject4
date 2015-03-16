@@ -5,6 +5,7 @@ This is my Project 4 for the Udacity Web Development Nanodegree.
 Optimizations that I did were:
 * add print media query to print css so it doesn't block DOM construction
 * compress pizzeria image from 2.4MB to 516KB to save bandwith and time to/from server reuce size to 640 x 480
+* make Google analytics async
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
