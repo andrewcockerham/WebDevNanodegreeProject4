@@ -1,1 +1,2 @@
 used http://compressnow.com/ to compress image
+used Apple Preview to resize image
