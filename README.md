@@ -6,6 +6,9 @@ Optimizations that I did were:
 * add print media query to print css so it doesn't block DOM construction
 * compress pizzeria image from 2.4MB to 516KB to save bandwith and time to/from server reuce size to 320 x 240
 * make Google analytics async
+* move "header { padding: 0 0.5em; color: #C90B0B; }header img { border-radius: 40px; float: left; }
+header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
+header p span { font-size: 0.8em; font-weight: normal;}" inline
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
