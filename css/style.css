@@ -19,11 +19,6 @@ img { border: 0; max-width: 100%; }
 body { background: #fff; }
 header, footer, .container { max-width: 45em; margin: 0 auto; }
 
-.hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-}
-
 .content { padding: 1em 1em; }
 .content li { list-style-type: none; font-size: 1.1em;}
 li img { float:left; padding-right: 1em; }
