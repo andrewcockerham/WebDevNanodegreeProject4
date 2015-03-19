@@ -503,13 +503,25 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-  console.log(items)
+  var visibleItems = []
+  console.log(items);
+  for (var i = 0; i < items.length; i++) {
+    var itemBounds = item.getBoundingClientRect();
+    if (itemBounds.top >= 0 ||
+      itemBounds.left >= 0 ||
+      itemBounds.bottom <= $(window).height() ||
+      itemBounds.right <= $(window).width()) {
+      visibleItems.push(items[i]);
+    }
+  }
+  console.log(visibleItems);
+
   // for each items
   //   if item is visible
   //     push to visibleitems
-  for (var i = 0; i < items.length; i++) {
+  for (var i = 0; i < visibleItems.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    visibleItems[i].style.left = visibleItems[i].basicLeft + 100 * phase + 'px';
   }
 
 
