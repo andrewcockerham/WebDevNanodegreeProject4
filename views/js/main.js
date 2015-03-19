@@ -514,7 +514,7 @@ function updatePositions() {
       visibleItems.push(items[i]);
     }
   }
-  console.log(visibleItems);
+  console.log(visibleItems.length);
 
   // for each items
   //   if item is visible
