@@ -503,25 +503,26 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-  var visibleItems = []
-  for (var i = 0; i < items.length; i++) {
-    var itemBounds = items[i].getBoundingClientRect();
-    console.log(itemBounds);
-    if (itemBounds.top >= 0 ||
-      itemBounds.left >= 0 ||
-      itemBounds.bottom <= $(window).height() ||
-      itemBounds.right <= $(window).width()) {
-      visibleItems.push(items[i]);
-    }
-  }
-  console.log(visibleItems.length);
+  // TRIED TO ONLY UPDATE VISIBLE PIZZAS, BUT NOT WORKING YET
+  // var visibleItems = []
+  // for (var i = 0; i < items.length; i++) {
+  //   var itemBounds = items[i].getBoundingClientRect();
+  //   console.log(itemBounds);
+  //   if (itemBounds.top >= 0 ||
+  //     itemBounds.left >= 0 ||
+  //     itemBounds.bottom <= $(window).height() ||
+  //     itemBounds.right <= $(window).width()) {
+  //     visibleItems.push(items[i]);
+  //   }
+  // }
+  // console.log(visibleItems.length);
 
   // for each items
   //   if item is visible
   //     push to visibleitems
-  for (var i = 0; i < visibleItems.length; i++) {
+  for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    visibleItems[i].style.left = visibleItems[i].basicLeft + 100 * phase + 'px';
+    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
 
