@@ -504,9 +504,9 @@ function updatePositions() {
 
   var items = document.querySelectorAll('.mover');
   var visibleItems = []
-  console.log(items);
   for (var i = 0; i < items.length; i++) {
     var itemBounds = items[i].getBoundingClientRect();
+    console.log(itemBounds);
     if (itemBounds.top >= 0 ||
       itemBounds.left >= 0 ||
       itemBounds.bottom <= $(window).height() ||
