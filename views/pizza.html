@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>  
+<head>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
 </head>
@@ -41,7 +41,7 @@
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-12">
-            <h2>We Have Hundreds of Pizza Recipes!</h2>            
+            <h2>We Have Hundreds of Pizza Recipes!</h2>
             <p>At Cam's Pizzeria, we know you want options. Pepperoni? Boring. Cheese? No way! Sausage? C'mon, let's get creative.</p>
 
             <p>We have every pizza ingredient imaginable in our kitchen because we know you take choice seriously. Take a look through our menu of hundreds of pizza options and we know that you'll find something you love.</p>
@@ -137,6 +137,24 @@
     </div>
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
   </div>
+  <script>
+    // Generates the sliding pizzas when the page loads.
+    document.addEventListener('DOMContentLoaded', function() {
+      var cols = 8;
+      var s = 256;
+      for (var i = 0; i < 200; i++) {
+        var elem = document.createElement('img');
+        elem.className = 'mover';
+        elem.src = "images/pizza.png";
+        elem.style.height = "100px";
+        elem.style.width = "73.333px";
+        elem.basicLeft = (i % cols) * s;
+        elem.style.top = (Math.floor(i / cols) * s) + 'px';
+        document.querySelector("#movingPizzas1").appendChild(elem);
+      }
+      // updatePositions();
+    });
+  </script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
