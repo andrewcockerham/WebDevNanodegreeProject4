@@ -523,7 +523,7 @@ function updatePositions() {
   var viewport_height = window.height
   var viewport_bottom = viewport_top + viewport_height
   // var $elem = $(elem)
-  var top = items[i].offset().top
+  var top = items[i].offsetTop//.offset().top
   var height = items[i].height()
   var bottom = top + height
   console.log(viewport_top);
