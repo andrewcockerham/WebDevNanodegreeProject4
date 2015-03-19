@@ -502,11 +502,11 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover').filter(":onScreen");
+  var items = document.querySelectorAll('.mover');//.filter(":onScreen");
   console.log(items.length);
   // TRIED TO ONLY UPDATE VISIBLE PIZZAS, BUT NOT WORKING YET
   // var visibleItems = []
-  // for (var i = 0; i < items.length; i++) {
+  for (var i = 0; i < items.length; i++) {
   //   var itemBounds = items[i].getBoundingClientRect();
   //   console.log(itemBounds);
   //   if (itemBounds.top >= 0 ||
@@ -518,6 +518,20 @@ function updatePositions() {
   // }
   // console.log(visibleItems.length);
 
+  // var $window = $(window)
+  var viewport_top = window.scrollTop
+  var viewport_height = window.height
+  var viewport_bottom = viewport_top + viewport_height
+  // var $elem = $(elem)
+  var top = item[i].offset().top
+  var height = item[i].height()
+  var bottom = top + height
+  console.log(viewport_top);
+  console.log(viewport_height);
+  return (top >= viewport_top && top < viewport_bottom) ||
+         (bottom > viewport_top && bottom <= viewport_bottom) ||
+         (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+  }
   // for each items
   //   if item is visible
   //     push to visibleitems
