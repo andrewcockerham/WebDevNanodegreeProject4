@@ -506,7 +506,7 @@ function updatePositions() {
   var visibleItems = []
   console.log(items);
   for (var i = 0; i < items.length; i++) {
-    var itemBounds = item.getBoundingClientRect();
+    var itemBounds = items[i].getBoundingClientRect();
     if (itemBounds.top >= 0 ||
       itemBounds.left >= 0 ||
       itemBounds.bottom <= $(window).height() ||
