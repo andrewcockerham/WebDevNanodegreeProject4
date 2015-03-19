@@ -1,2 +1,5 @@
 used http://compressnow.com/ to compress image
 used Apple Preview to resize image
+http://stackoverflow.com/questions/1350581/how-to-get-an-elements-top-position-relative-to-the-browsers-window
+http://stackoverflow.com/questions/15615552/get-div-height-with-plain-javascript
+jqueryplugin/jquery.onscreen.min.js
