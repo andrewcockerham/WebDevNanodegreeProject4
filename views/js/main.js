@@ -535,18 +535,15 @@ function updatePositions() {
   //        PIZZAHEIGHT > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
   //         visibleItems.push(items[i]);
   //        }
-  // console.log(visibleItems.length)
   // }
   // for each items
   //   if item is visible
   //     push to visibleitems
-  // console.log(document.body.scrollTop);
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-    console.log(phase, document.body.scrollTop / 1250)
+    // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    items[i].style.left = items[i].basicLeft + 100 * 2 + 'px';
+    // console.log(phase, document.body.scrollTop / 1250)
   }
-
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
