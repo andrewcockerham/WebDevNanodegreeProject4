@@ -498,12 +498,12 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
   var PIZZAHEIGHT = "100px";
   var PIZZAWIDTH = "73.333px";
-
+  var COUNT = 0;
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-
+  console.log("updatePositions" + COUNT++)
   var items = document.querySelectorAll('.mover');//.filter(":onScreen");
   console.log(items.length);
   // TRIED TO ONLY UPDATE VISIBLE PIZZAS, BUT NOT WORKING YET
@@ -511,10 +511,8 @@ function updatePositions() {
   // for (var i = 0; i < items.length; i++) {
   // //   var itemBounds = items[i].getBoundingClientRect();
   // //   console.log(itemBounds);
-
   // // }
   // // console.log(visibleItems.length);
-
   // // var $window = $(window)
   // var viewport_top = document.body.scrollTop
   // // var viewport_top = window.scrollTop
