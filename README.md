@@ -12,6 +12,7 @@ Optimizations that I did were:
 
 (FPS)
 * don't need 200 pizzas. only create enough to cover visible page, and have them update y position on scroll
+* move .mover class height/width into CSS
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
