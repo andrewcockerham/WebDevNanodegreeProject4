@@ -540,7 +540,7 @@ function updatePositions() {
   //   if item is visible
   //     push to visibleitems
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((i % 5));
+    var phase = Math.sin(5);
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     // console.log(phase, document.body.scrollTop / 1250)
