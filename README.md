@@ -10,6 +10,9 @@ Optimizations that I did were:
 * only load subset Latin for google fonts
 * move google fonts to inline javascript
 
+(FPS)
+* don't need 200 pizzas. only create enough to cover visible page, and have them update y position on scroll
+
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 To get started, check out the repository, inspect the code,

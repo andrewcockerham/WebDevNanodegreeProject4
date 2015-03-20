@@ -507,45 +507,46 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');//.filter(":onScreen");
   console.log(items.length);
   // TRIED TO ONLY UPDATE VISIBLE PIZZAS, BUT NOT WORKING YET
-  var visibleItems = []
-  for (var i = 0; i < items.length; i++) {
-  //   var itemBounds = items[i].getBoundingClientRect();
-  //   console.log(itemBounds);
+  // var visibleItems = []
+  // for (var i = 0; i < items.length; i++) {
+  // //   var itemBounds = items[i].getBoundingClientRect();
+  // //   console.log(itemBounds);
 
+  // // }
+  // // console.log(visibleItems.length);
+
+  // // var $window = $(window)
+  // var viewport_top = document.body.scrollTop
+  // // var viewport_top = window.scrollTop
+  // var viewport_height = window.innerHeight
+  // var viewport_bottom = viewport_top + viewport_height
+  // // var $elem = $(elem)
+  // var top = items[i].offsetTop//.offset().top
+  // // var height = items[i].offsetHeight
+  // var bottom = top + PIZZAHEIGHT
+  // console.log(viewport_top);
+  // console.log(viewport_height);
+  // //   if (itemBounds.top >= 0 ||
+  // //     itemBounds.left >= 0 ||
+  // //     itemBounds.bottom <= $(window).height() ||
+  // //     itemBounds.right <= $(window).width()) {
+  // //     visibleItems.push(items[i]);
+  // //   }
+  // if (top >= viewport_top && top < viewport_bottom ||
+  //        bottom > viewport_top && bottom <= viewport_bottom ||
+  //        PIZZAHEIGHT > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
+  //         visibleItems.push(items[i]);
+  //        }
+  // console.log(visibleItems.length)
   // }
-  // console.log(visibleItems.length);
-
-  // var $window = $(window)
-  var viewport_top = document.body.scrollTop
-  // var viewport_top = window.scrollTop
-  var viewport_height = window.innerHeight
-  var viewport_bottom = viewport_top + viewport_height
-  // var $elem = $(elem)
-  var top = items[i].offsetTop//.offset().top
-  // var height = items[i].offsetHeight
-  var bottom = top + PIZZAHEIGHT
-  console.log(viewport_top);
-  console.log(viewport_height);
-  //   if (itemBounds.top >= 0 ||
-  //     itemBounds.left >= 0 ||
-  //     itemBounds.bottom <= $(window).height() ||
-  //     itemBounds.right <= $(window).width()) {
-  //     visibleItems.push(items[i]);
-  //   }
-  if (top >= viewport_top && top < viewport_bottom ||
-         bottom > viewport_top && bottom <= viewport_bottom ||
-         PIZZAHEIGHT > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
-          visibleItems.push(items[i]);
-         }
-  console.log(visibleItems.length)
-  }
   // for each items
   //   if item is visible
   //     push to visibleitems
   // console.log(document.body.scrollTop);
-  for (var i = 0; i < visibleItems.length; i++) {
+  for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    visibleItems[i].style.left = visibleItems[i].basicLeft + 100 * phase + 'px';
+    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    console.log(phase, document.body.scrollTop / 1250)
   }
 
 
