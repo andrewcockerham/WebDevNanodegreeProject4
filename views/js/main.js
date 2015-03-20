@@ -496,6 +496,8 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
+  var PIZZAHEIGHT = "100px";
+  var PIZZAWIDTH = "73.333px";
 
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
@@ -509,12 +511,7 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
   //   var itemBounds = items[i].getBoundingClientRect();
   //   console.log(itemBounds);
-  //   if (itemBounds.top >= 0 ||
-  //     itemBounds.left >= 0 ||
-  //     itemBounds.bottom <= $(window).height() ||
-  //     itemBounds.right <= $(window).width()) {
-  //     visibleItems.push(items[i]);
-  //   }
+
   // }
   // console.log(visibleItems.length);
 
@@ -525,13 +522,19 @@ function updatePositions() {
   var viewport_bottom = viewport_top + viewport_height
   // var $elem = $(elem)
   var top = items[i].offsetTop//.offset().top
-  var height = items[i].offsetHeight
-  var bottom = top + height
+  // var height = items[i].offsetHeight
+  var bottom = top + PIZZAHEIGHT
   console.log(viewport_top);
   console.log(viewport_height);
+  //   if (itemBounds.top >= 0 ||
+  //     itemBounds.left >= 0 ||
+  //     itemBounds.bottom <= $(window).height() ||
+  //     itemBounds.right <= $(window).width()) {
+  //     visibleItems.push(items[i]);
+  //   }
   if (top >= viewport_top && top < viewport_bottom ||
          bottom > viewport_top && bottom <= viewport_bottom ||
-         height > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
+         PIZZAHEIGHT > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
           visibleItems.push(items[i]);
          }
   console.log(visibleItems.length)
