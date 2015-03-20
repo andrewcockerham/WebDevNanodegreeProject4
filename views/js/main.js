@@ -529,9 +529,9 @@ function updatePositions() {
   var bottom = top + height
   console.log(viewport_top);
   console.log(viewport_height);
-  if (top >= viewport_top && top < viewport_bottom) ||
-         (bottom > viewport_top && bottom <= viewport_bottom) ||
-         (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
+  if (top >= viewport_top && top < viewport_bottom ||
+         bottom > viewport_top && bottom <= viewport_bottom ||
+         height > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
           visibleItems.push(items[i]);
          }
   console.log(visibleItems.length)
