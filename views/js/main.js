@@ -542,12 +542,12 @@ function updatePositions() {
   var scrollTop = document.body.scrollTop / 1250
   // var arr = [0,1,2,3,4];
   for (var i = 0; i < items.length; i++) {
-    console.log("----");
-    console.log("i = " + i);
-    console.log("i % 5 = " + (i % 5));
-    console.log("document.body.scrollTop = " + document.body.scrollTop);
+    // console.log("----");
+    // console.log("i = " + i);
+    // console.log("i % 5 = " + (i % 5));
+    // console.log("document.body.scrollTop = " + document.body.scrollTop);
     var phase = Math.sin(scrollTop * i);
-    console.log("phase = " + phase);
+    // console.log("phase = " + phase);
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     // console.log(phase, Math.sin(document.body.scrollTop / 1250));
