@@ -523,10 +523,8 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var scrollTop = document.body.scrollTop / 1250
-  // var arr = [0,1,2,3,4];
   for (var i = 0; i < pizzas.length; i++) {
     var phase = Math.sin(scrollTop + (i % 5));
-    // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     pizzas[i].style.left = pizzas[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -547,12 +545,13 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  // reduce number of pizzas to 24, as that is the max seen on my screen.
+  // Also we don't need to use javascript to create the style.height and width, this
+  // can be moved to CSS.
   for (var i = 0; i < 24; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
-    elem.src = "images/pizza.png";
-    // elem.style.height = "100px";
-    // elem.style.width = "73.333px";
+
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
