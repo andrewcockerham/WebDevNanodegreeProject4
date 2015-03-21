@@ -467,18 +467,18 @@ var resizePizzas = function(size) {
     numPizzaContainers = pizzaContainers.length;
     dx = determineDx(pizzaContainers[0], size);
     newwidth = (pizzaContainers[0].offsetWidth + dx) + 'px';
-    console.log(size);
-    if (size == 2) {
-      pizzaContainers[0].classList.add("mediumPizza");
-      pizzaContainers[0].classList.remove("largePizza");
-      // pizzaContainers[0].addClass("mediumPizza");
-    } else if (size == 3) {
-      pizzaContainers[0].className += " largePizza";
-      pizzaContainers[0].classList.remove("mediumPizza");
-    }
-    // for (var i = 0; i < numPizzaContainers; i++) {
-    //   pizzaContainers[i].style.width = newwidth;
+    // console.log(size);
+    // if (size == 2) {
+    //   pizzaContainers[0].classList.add("mediumPizza");
+    //   pizzaContainers[0].classList.remove("largePizza");
+    //   // pizzaContainers[0].addClass("mediumPizza");
+    // } else if (size == 3) {
+    //   pizzaContainers[0].className += " largePizza";
+    //   pizzaContainers[0].classList.remove("mediumPizza");
     // }
+    for (var i = 0; i < numPizzaContainers; i++) {
+      pizzaContainers[i].style.width = newwidth;
+    }
   }
 
   changePizzaSizes(size);
