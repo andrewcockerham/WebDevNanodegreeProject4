@@ -13,8 +13,11 @@ This is my Project 4 for the Udacity Frent End Web Development Nanodegree.
 
 ### Optimizations for 60 FPS on the pizza.html page
 * We don't need 200 pizzas. Nowhere near that many are even visible, so why waste resources rendering and updating something that isn't visible? I reduced the number of pizzas to only create enough to cover the visible page
-#### updatePositions
-
-#### resizePizzas
 * replace all instances of `querySelector` with `getElementBy....` as this is faster
 * move .mover class height/width into CSS
+
+#### updatePositions
+* asdf
+#### resizePizzas
+* I moved the DOM lookups for `pizzaSize` and `randomPizzas` out of the for loop because they only need to be looked up once, and fewer times accessing the DOM will speed things up
+
