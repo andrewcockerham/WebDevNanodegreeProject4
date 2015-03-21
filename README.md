@@ -18,9 +18,11 @@ This is my Project 4 for the Udacity Frent End Web Development Nanodegree.
 * when adding all the `randomPizzas` to the `pizzasDiv`, We don't need to lookup the `pizzasDiv` each time through the `for` loop, as it doesn't change. We can look it up outside the `for` loop, which is much faster.
 
 #### updatePositions
-* asdf
+* Move the DOM lookup for class `.mover` out of the `for` loop and function, as it only
+   needs ot happen once.
+* Move the `scrollTop` DOM access out of the `for` loop, as it only needs to be done once.
 
 #### resizePizzas
-* I moved the DOM lookups for `pizzaSize` and `randomPizzas` out of the for loop because they only need to be looked up once, and fewer times accessing the DOM will speed things up
-* for `changePizzaSizes` there is no need to calculate everything in the `for` loop, and certainly not to access the DOM looking up the class `randomPizzaContainer` each time. So those are moved outside the `for` loop so they only need to be looked up once. The only thing we must do in the `for` loop is what effects or is unique to each `pizzaContainer`, and that is change the width.
+* I moved the DOM lookups for `pizzaSize` and `randomPizzas` out of the `for` loop because they only need to be looked up once, and fewer times accessing the DOM will speed things up
+* for `changePizzaSizes` there is no need to calculate everything in the `for` loop, and certainly not to access the DOM looking up the class `randomPizzaContainer` each time. So those are moved outside the `for` loop so they only need to be looked up once. The only thing we must do in the `for` loop is what effects or is unique to each `pizzaContainer`, and that is change the width. The `pizzaContainers`, `numPizzaContainers`, `dx`, and `newwidth`, variables can all be pulled out of the `for` loop.
 
