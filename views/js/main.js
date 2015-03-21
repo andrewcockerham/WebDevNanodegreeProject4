@@ -416,6 +416,8 @@ function changeSliderLabel(size) {
 }
 
 
+
+
 var pizzaSize = document.getElementById("pizzaSize");
 var randomPizzas = document.getElementById("randomPizzas");
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
@@ -453,11 +455,11 @@ var resizePizzas = function(size) {
 
   var pizzaContainers = document.getElementsByClassName("randomPizzaContainer");
   var numPizzaContainers = pizzaContainers.length;
+  var dx = determineDx(pizzaContainers[i], size);
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
     for (var i = 0; i < numPizzaContainers; i++) {
-      var dx = determineDx(pizzaContainers[i], size);
       var newwidth = (pizzaContainers[i].offsetWidth + dx) + 'px';
       pizzaContainers[i].style.width = newwidth;
     }
