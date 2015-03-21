@@ -6,3 +6,5 @@ jqueryplugin/jquery.onscreen.min.js -- ended up not using this
 * https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS -- this was helpful
 * http://discussions.udacity.com/t/what-are-the-best-was-to-improve-the-updatepositions-and-changepizzasizes-functions/3102/13
 * http://discussions.udacity.com/t/fps-problem-varies/13711/2
+* http://cssminifier.com/
+* http://jscompress.com/

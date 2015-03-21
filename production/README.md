@@ -27,3 +27,4 @@ This is my Project 4 for the Udacity Frent End Web Development Nanodegree.
 * I moved the DOM lookups for `pizzaSize` and `randomPizzas` out of the `for` loop because they only need to be looked up once, and fewer times accessing the DOM will speed things up
 * for `changePizzaSizes` there is no need to calculate everything in the `for` loop, and certainly not to access the DOM looking up the class `randomPizzaContainer` each time. So those are moved outside the `for` loop so they only need to be looked up once. The only thing we must do in the `for` loop is what effects or is unique to each `pizzaContainer`, and that is change the width. The `pizzaContainers`, `numPizzaContainers`, `dx`, and `newwidth`, variables can all be pulled out of the `for` loop.
 
+See `resouces.txt` for list of resources and references used.
