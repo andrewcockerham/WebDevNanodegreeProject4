@@ -540,7 +540,7 @@ function updatePositions() {
   //   if item is visible
   //     push to visibleitems
   var scrollTop = document.body.scrollTop / 1250
-  var arr = [0,1,2,3,4];
+  // var arr = [0,1,2,3,4];
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scrollTop * i);
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
@@ -565,7 +565,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 24; i++) {
+  for (var i = 0; i < 5; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
