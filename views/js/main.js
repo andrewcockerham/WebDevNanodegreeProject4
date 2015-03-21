@@ -547,7 +547,7 @@ function updatePositions() {
     // console.log("i = " + i);
     // console.log("i % 5 = " + (i % 5));
     // console.log("document.body.scrollTop = " + document.body.scrollTop);
-    var phase = Math.sin(scrollTop * i);
+    var phase = Math.sin(scrollTop + (i % 5));
     // console.log("phase = " + phase);
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     pizzas[i].style.left = pizzas[i].basicLeft + 100 * phase + 'px';
