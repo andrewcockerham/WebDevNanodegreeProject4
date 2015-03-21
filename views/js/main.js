@@ -496,62 +496,19 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
-  var PIZZAHEIGHT = "100px";
-  var PIZZAWIDTH = "73.333px";
-  var COUNT = 0;
+
   var pizzas = document.getElementsByClassName("mover");
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-  console.log("updatePositions" + COUNT++)
-  // var items = document.querySelectorAll('.mover');//.filter(":onScreen");
-  // console.log(items.length);
-  // TRIED TO ONLY UPDATE VISIBLE PIZZAS, BUT NOT WORKING YET
-  // var visibleItems = []
-  // for (var i = 0; i < items.length; i++) {
-  // //   var itemBounds = items[i].getBoundingClientRect();
-  // //   console.log(itemBounds);
-  // // }
-  // // console.log(visibleItems.length);
-  // // var $window = $(window)
-  // var viewport_top = document.body.scrollTop
-  // // var viewport_top = window.scrollTop
-  // var viewport_height = window.innerHeight
-  // var viewport_bottom = viewport_top + viewport_height
-  // // var $elem = $(elem)
-  // var top = items[i].offsetTop//.offset().top
-  // // var height = items[i].offsetHeight
-  // var bottom = top + PIZZAHEIGHT
-  // console.log(viewport_top);
-  // console.log(viewport_height);
-  // //   if (itemBounds.top >= 0 ||
-  // //     itemBounds.left >= 0 ||
-  // //     itemBounds.bottom <= $(window).height() ||
-  // //     itemBounds.right <= $(window).width()) {
-  // //     visibleItems.push(items[i]);
-  // //   }
-  // if (top >= viewport_top && top < viewport_bottom ||
-  //        bottom > viewport_top && bottom <= viewport_bottom ||
-  //        PIZZAHEIGHT > viewport_height && top <= viewport_top && bottom >= viewport_bottom) {
-  //         visibleItems.push(items[i]);
-  //        }
-  // }
-  // for each items
-  //   if item is visible
-  //     push to visibleitems
+
   var scrollTop = document.body.scrollTop / 1250
   // var arr = [0,1,2,3,4];
   for (var i = 0; i < pizzas.length; i++) {
-    // console.log("----");
-    // console.log("i = " + i);
-    // console.log("i % 5 = " + (i % 5));
-    // console.log("document.body.scrollTop = " + document.body.scrollTop);
     var phase = Math.sin(scrollTop + (i % 5));
-    // console.log("phase = " + phase);
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     pizzas[i].style.left = pizzas[i].basicLeft + 100 * phase + 'px';
-    // console.log(phase, Math.sin(document.body.scrollTop / 1250));
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
