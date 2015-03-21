@@ -10,6 +10,7 @@ This is my Project 4 for the Udacity Frent End Web Development Nanodegree.
 * move entire styles.css file inline to reduce critical resource length
 * only load subset Latin for google fonts to reduce critical bytes
 * move google fonts to inline javascript
+* minify css and javascript
 
 ### Optimizations for 60 FPS on the pizza.html page
 * We don't need 200 pizzas. Nowhere near that many are even visible, so why waste resources rendering and updating something that isn't visible? I reduced the number of pizzas to only create enough to cover the visible page
