@@ -1,8 +1,8 @@
-used http://compressnow.com/ to compress image
-used Apple Preview to resize image
-http://stackoverflow.com/questions/1350581/how-to-get-an-elements-top-position-relative-to-the-browsers-window -- ended up not using this
-http://stackoverflow.com/questions/15615552/get-div-height-with-plain-javascript
+* used http://compressnow.com/ to compress image
+* used Apple Preview to resize image
+* http://stackoverflow.com/questions/1350581/how-to-get-an-elements-top-position-relative-to-the-browsers-window -- ended up not using this
+* http://stackoverflow.com/questions/15615552/get-div-height-with-plain-javascript
 jqueryplugin/jquery.onscreen.min.js -- ended up not using this
-https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS -- this was helpful
-http://discussions.udacity.com/t/what-are-the-best-was-to-improve-the-updatepositions-and-changepizzasizes-functions/3102/13
-http://discussions.udacity.com/t/fps-problem-varies/13711/2
+* https://github.com/udacity/fend-office-hours/tree/master/Web%20Optimization/Effective%20Optimizations%20for%2060%20FPS -- this was helpful
+* http://discussions.udacity.com/t/what-are-the-best-was-to-improve-the-updatepositions-and-changepizzasizes-functions/3102/13
+* http://discussions.udacity.com/t/fps-problem-varies/13711/2

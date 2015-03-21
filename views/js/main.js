@@ -415,16 +415,16 @@ function changeSliderLabel(size) {
   }
 }
 
-
-
-
+// Andrew's comments
+/* Pull the DOM lokups out of the function, as they only need to happen once. Also
+   use getElementById instead of querySelector because its faster.
+*/
 var pizzaSize = document.getElementById("pizzaSize");
 var randomPizzas = document.getElementById("randomPizzas");
+
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
-
-  changeSliderLabel(size);
 
   // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
   function determineDx (elem, size) {
@@ -516,12 +516,20 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
-  var pizzas = document.getElementsByClassName("mover");
+// Andrew's comments:
+/* Move the DOM lookup for class .mover out of the for loop and function, as it only
+   needs ot happen once. Also use `getElementsByClassName` instead of `querySelector`
+   because its faster.
+*/
+
+var pizzas = document.getElementsByClassName("mover");
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
+  // Andrew: move the scrollTop DOM access out of the for loop, as it only needs to
+  //   be done once.
   var scrollTop = document.body.scrollTop / 1250
   for (var i = 0; i < pizzas.length; i++) {
     var phase = Math.sin(scrollTop + (i % 5));
@@ -545,7 +553,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  // reduce number of pizzas to 24, as that is the max seen on my screen.
+  // Andrew's comments: reduce number of pizzas to 24, as that is the max seen on my screen.
   // Also we don't need to use javascript to create the style.height and width, this
   // can be moved to CSS.
   for (var i = 0; i < 24; i++) {
