@@ -470,7 +470,7 @@ var resizePizzas = function(size) {
     console.log(size);
     if (size == 2) {
       pizzaContainers[0].className += " mediumPizza";
-      pizzaContainers[0].classList.remove("largePizza";)
+      pizzaContainers[0].classList.remove("largePizza");
       // pizzaContainers[0].addClass("mediumPizza");
     } else if (size == 3) {
       pizzaContainers[0].className += " largePizza";
