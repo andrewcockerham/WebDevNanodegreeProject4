@@ -499,13 +499,14 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   var PIZZAHEIGHT = "100px";
   var PIZZAWIDTH = "73.333px";
   var COUNT = 0;
+  var pizzas = document.getElementsByClassName("mover");
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
   console.log("updatePositions" + COUNT++)
-  var items = document.querySelectorAll('.mover');//.filter(":onScreen");
-  console.log(items.length);
+  // var items = document.querySelectorAll('.mover');//.filter(":onScreen");
+  // console.log(items.length);
   // TRIED TO ONLY UPDATE VISIBLE PIZZAS, BUT NOT WORKING YET
   // var visibleItems = []
   // for (var i = 0; i < items.length; i++) {
@@ -541,7 +542,7 @@ function updatePositions() {
   //     push to visibleitems
   var scrollTop = document.body.scrollTop / 1250
   // var arr = [0,1,2,3,4];
-  for (var i = 0; i < items.length; i++) {
+  for (var i = 0; i < pizzas.length; i++) {
     // console.log("----");
     // console.log("i = " + i);
     // console.log("i % 5 = " + (i % 5));
@@ -549,7 +550,7 @@ function updatePositions() {
     var phase = Math.sin(scrollTop * i);
     // console.log("phase = " + phase);
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    pizzas[i].style.left = pizzas[i].basicLeft + 100 * phase + 'px';
     // console.log(phase, Math.sin(document.body.scrollTop / 1250));
   }
 
