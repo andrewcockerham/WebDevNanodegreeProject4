@@ -541,7 +541,7 @@ function updatePositions() {
   //     push to visibleitems
   var scrollTop = document.body.scrollTop / 1250
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(scrollTop + (Math.random() * (5 - 1) + 1));
+    var phase = Math.sin(scrollTop + (Math.random() * (2 - 1) + 1));
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     console.log(phase, Math.floor(i/5))
