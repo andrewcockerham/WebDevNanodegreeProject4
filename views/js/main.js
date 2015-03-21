@@ -454,12 +454,19 @@ var resizePizzas = function(size) {
   }
 
   // Iterates through pizza elements on the page and changes their widths
+  ///// Andrew's comments:
+  /* There is no need to calculate everything in the for loop, and certainly not to
+     access the DOM looking up the class 'randomPizzaContainer' each time. Also, using
+     `getElementsByClassName` is faster than `querySelector`.
+     The only thing we must do in the for loop is what effects or is unique to each
+     pizzaContainer, and that is change the width.
+  */
   function changePizzaSizes(size) {
-    var pizzaContainers, numPizzaContainers, dx;
+    var pizzaContainers, numPizzaContainers, dx, newwidth;
     pizzaContainers = document.getElementsByClassName("randomPizzaContainer");
     numPizzaContainers = pizzaContainers.length;
     dx = determineDx(pizzaContainers[0], size);
-    var newwidth = (pizzaContainers[0].offsetWidth + dx) + 'px';
+    newwidth = (pizzaContainers[0].offsetWidth + dx) + 'px';
     for (var i = 0; i < numPizzaContainers; i++) {
       pizzaContainers[i].style.width = newwidth;
     }
@@ -477,8 +484,12 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+///// Andrew's comments
+/* We don't need to lookup the 'pizzasDiv' each time through the for loop, as it doesn't
+   change. We can look it up outside the for loop, which is much faster.
+*/
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
