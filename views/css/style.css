@@ -36,7 +36,7 @@ form {
   height: 100px;
   width: 73.333px;
   backface-visibility: hidden;
-  content:url("views/images/pizza.png");
+  /*content:url("views/images/pizza.png");*/
 }
 
 .randomPizzaContainer {
