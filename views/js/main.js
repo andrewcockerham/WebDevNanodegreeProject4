@@ -499,7 +499,6 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   var PIZZAHEIGHT = "100px";
   var PIZZAWIDTH = "73.333px";
   var COUNT = 0;
-  var SCROLLTOP = document.body.scrollTop / 1250
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
@@ -540,9 +539,9 @@ function updatePositions() {
   // for each items
   //   if item is visible
   //     push to visibleitems
-
+  var scrollTop = document.body.scrollTop / 1250
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(SCROLLTOP + (i % 5));
+    var phase = Math.sin(scrollTop);
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     console.log(phase, Math.floor(i/5))
