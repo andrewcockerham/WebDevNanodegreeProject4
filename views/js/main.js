@@ -471,6 +471,8 @@ var resizePizzas = function(size) {
     if (size == 2) {
       pizzaContainers[0].className += " mediumPizza";
       // pizzaContainers[0].addClass("mediumPizza");
+    } else if (size == 3) {
+      pizzaContainers[0].className += " largePizza";
     }
     // for (var i = 0; i < numPizzaContainers; i++) {
     //   pizzaContainers[i].style.width = newwidth;
