@@ -8,3 +8,4 @@ jqueryplugin/jquery.onscreen.min.js -- ended up not using this
 * http://discussions.udacity.com/t/fps-problem-varies/13711/2
 * http://cssminifier.com/
 * http://jscompress.com/
+* http://stackoverflow.com/questions/16154552/removing-class-from-a-div-in-javascript
