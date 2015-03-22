@@ -17,6 +17,7 @@ This is my Project 4 for the Udacity Frent End Web Development Nanodegree.
 * replace all instances of `querySelector` with `getElementBy....` as this is faster
 * move `.mover` class height/width into CSS
 * when adding all the `randomPizzas` to the `pizzasDiv`, We don't need to lookup the `pizzasDiv` each time through the `for` loop, as it doesn't change. We can look it up outside the `for` loop, which is much faster.
+* added `back-face: visibility` to the background pizzas so they render in their own layer
 
 #### updatePositions
 * Move the DOM lookup for class `.mover` out of the `for` loop and function, as it only
